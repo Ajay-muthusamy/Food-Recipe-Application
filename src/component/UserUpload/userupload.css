@@ -1,0 +1,18 @@
+.formcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+ }
+ .maincontainer{
+    background-image: url('https://static.vecteezy.com/system/resources/previews/002/099/721/original/mountain-beautiful-landscape-background-design-illustration-free-vector.jpg');
+    background-size: cover;
+    padding: 10%;
+ }
+ .uploadconatainer{
+   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('https://images.vexels.com/media/users/3/173778/raw/21db866c2086a86c5ec0f55b70269fa9-best-bbq-food-background-design.jpg');
+   background-size: cover;
+   padding: 4%;
+ }
+ 
