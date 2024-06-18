@@ -1,6 +1,4 @@
 # Food Recipe Application
-<<<<<<< HEAD
-![Screenshot of Food Recipe App](assests/d2.jpg)
 ## Overview
 The Food Recipe Application is a web-based platform built using the MERN stack (MongoDB, Express.js, React.js, Node.js) where users can explore various food recipes and upload their own recipes. The application is dynamic and responsive, providing an engaging user experience across different devices.
 
