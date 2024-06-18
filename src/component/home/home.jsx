@@ -4,7 +4,7 @@ import '../home/home.css'
 const home = () => {
   return (
     <div>
-      <div className="main-container">
+      <div className="main-container m-5">
         <h1 className='text-white text-center pt-5'>What's is Foody</h1>
         <h4 className='text-white text-center'>"Easy Eats: Your Food Guide"</h4>
         <div className='smallfoodcontainer d-flex justify-content-center gap-3 p-4'>

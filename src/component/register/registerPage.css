@@ -1,0 +1,23 @@
+#frm{
+    width: 40vh;
+}
+form{
+    font-size: 16px;
+}
+.primary{
+    color: orange;
+}
+.btn1{
+    padding: 5%;
+}
+#sec{
+    width: 45vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 80vh;
+    background-color: white;
+    margin-top: 5vh;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}

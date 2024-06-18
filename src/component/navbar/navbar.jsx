@@ -39,7 +39,7 @@ const navbar = () => {
               </li>
               <li className="nav-item">
                 <Link to="/apirecipe" className="nav-link text-white">
-                  Foody Recipes
+                  Recipes
                 </Link>
               </li>
               <li className="nav-item">
@@ -47,10 +47,15 @@ const navbar = () => {
                   upload
                 </Link>
               </li>
-              <li class="nav-item">
-                <a class="nav-link disabled text-white" aria-disabled="true">
+              <li className="nav-item">
+                <Link to="/adminDashboard" className="nav-link text-white">
                   Admin
-                </a>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/Register" className="nav-link text-white">
+                  Register
+                </Link>
               </li>
             </ul>
           </div>

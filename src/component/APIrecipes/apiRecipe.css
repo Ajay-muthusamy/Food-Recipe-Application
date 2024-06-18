@@ -1,0 +1,12 @@
+.api-container{
+        
+    background-image: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('D:\Food Recipe ws\Food_Recipe_app\src\assets\main.bg.jpg');
+    background-size: cover;
+    height: 30vh;
+    margin-top: 30vh;
+    border-radius: 20px;
+    margin-left: -0vh ;
+
+}

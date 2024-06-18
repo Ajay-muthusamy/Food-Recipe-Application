@@ -1,26 +1,45 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import addbanner from '../../assets/ad.jpg'
+import axios from 'axios';
+
 const MainContent = () => {
+  const[blog, setBlog] = useState([]);
+  useEffect(()=>{
+    const fetchblog = async()=>{
+      try{
+        const res = await axios.get('http://localhost:6969/food/display');
+        setBlog(res.data);
+      }
+      catch(error)
+      {
+        console.log('error fetching blogs:',error);
+      }
+    };
+    fetchblog();
+  },[]);
+
   return (
     <div className="p-5 text-white ">
       <div className="row g-5 text-white">
         <div className="col-md-8">
-          <h3 className="pb-4 mb-4 fst-italic border-bottom">Recipe Blog:</h3>
-          <article className="blog-post bg-dark-blue">
-            <h2 className="display-5 fs-4 link-body-emphasis mb-1 text-white">
-              Honey Garlic Chicken
-            </h2>
-            <p className="blog-post-meta">By Jane Doe | May 27, 2024</p>
-
-            <p>
-              Honey Garlic Chicken is a perfect blend of sweet and savory
-              flavors that makes for a delightful meal. This dish is easy to
-              prepare and can be served with rice, noodles, or vegetables,
-              making it a versatile addition to your recipe collection.
-            </p>
-            <hr />
-            <a href="#">12,345 view</a>
-          </article>
+        <h3 className="pb-4 mb-4 fst-italic border-bottom">Recipe Blog:</h3>
+          {blog.length > 0 ? (
+            blog.map(blogItem => (
+              <article key={blogItem._id} className="blog-post bg-dark-blue">
+                <h2 className="display-5 fs-4 link-body-emphasis mb-1 text-white">
+                  {blogItem.Heading}
+                </h2>
+                <p className="blog-post-meta">
+                  {blogItem.UserDate}
+                </p>
+                <p>Description: {blogItem.desc}</p>
+                <hr />
+                <a href="#">12,345 views</a>
+              </article>
+            ))
+          ) : (
+            <p>No blogs available</p>
+          )}
 
           {/* features */}
 
@@ -50,11 +69,9 @@ const MainContent = () => {
         <div className="col-md-4 text-dark">
           <div className="position-sticky" style={{ top: "2rem" }}>
             <div className="p-4 mb-3 bg-body-tertiary rounded">
-              <h4 className="fst-italic">About</h4>
+              <h4 className="fst-italic">About Foody</h4>
               <p className="mb-0">
-                Customize this section to tell your visitors a little bit about
-                your publication, writers, content, or something else entirely.
-                Totally up to you.
+              "Share your culinary expertise on Foody, the ultimate recipe hub. Discover new flavors, inspire others, and join a vibrant community of food lovers. Get cooking today! 🍳✨ #FoodyApp #RecipeSharing"
               </p>
             </div>
 
@@ -66,22 +83,12 @@ const MainContent = () => {
                     className="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
                     href="#"
                   >
-                    <svg
-                      className="bd-placeholder-img"
-                      width="100%"
-                      height="96"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      preserveAspectRatio="xMidYMid slice"
-                      focusable="false"
-                    >
-                      <rect width="100%" height="100%" fill="#777" />
-                    </svg>
+                    <img src="http://1.bp.blogspot.com/-zmjIv48Kp38/VYFqIQglYsI/AAAAAAAC_pE/tQ-URMGLVcI/s1600/1.JPG" alt=""  style={{width:"30%"}}/>
                     <div className="col-lg-8 text-white">
                       <h6 className="mb-0 text-white">
-                        Example blog post title
+                        Madurai Kari Dosai
                       </h6>
-                      <small className="text-white">January 15, 2024</small>
+                      <small className="text-white">May 27, 2024</small>
                     </div>
                   </a>
                 </li>
@@ -90,23 +97,13 @@ const MainContent = () => {
                     className="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
                     href="#"
                   >
-                    <svg
-                      className="bd-placeholder-img"
-                      width="100%"
-                      height="96"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      preserveAspectRatio="xMidYMid slice"
-                      focusable="false"
-                    >
-                      <rect width="100%" height="100%" fill="#777" />
-                    </svg>
+                    <img src="https://i.ytimg.com/vi/fNN-hCX2QZw/maxresdefault.jpg" alt=""  style={{width:"30%"}}/>
                     <div className="col-lg-8">
                       <h6 className="mb-0 text-white">
-                        This is another blog post title
+                        EruttuKadai Alva
                       </h6>
                       <small className="text-white text-white">
-                        January 14, 2024
+                        May 14, 2024
                       </small>
                     </div>
                   </a>
@@ -116,23 +113,13 @@ const MainContent = () => {
                     className="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
                     href="#"
                   >
-                    <svg
-                      className="bd-placeholder-img"
-                      width="100%"
-                      height="96"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      preserveAspectRatio="xMidYMid slice"
-                      focusable="false"
-                    >
-                      <rect width="100%" height="100%" fill="#777" />
-                    </svg>
+                   <img src="https://i.ytimg.com/vi/h29pu4MX360/maxresdefault.jpg " alt=""  style={{width:"30%"}}/>
                     <div className="col-lg-8">
                       <h6 className="mb-0 text-white">
-                        Longer blog post title: This one has multiple lines!
+                        Dindugal Thalapakkatti
                       </h6>
-                      <small className="text-body-secondary">
-                        January 13, 2024
+                      <small className=" text-white">
+                        May 18, 2024
                       </small>
                     </div>
                   </a>

@@ -4,6 +4,7 @@ import Home from "./component/home/home";
 import UserRecipe from "./component/UserRecipe/UserRecipe";
 import MainContent from "./component/UserRecipe/MainContent";
 import Footer from "./component/footer/footer";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const App = ({ addProduct, products }) => {
   return (
