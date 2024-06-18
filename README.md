@@ -1,8 +1,50 @@
-# React + Vite
+# Food Recipe Application
+![Screenshot of Food Recipe App](assests/d2.jpg)
+## Overview
+The Food Recipe Application is a web-based platform built using the MERN stack (MongoDB, Express.js, React.js, Node.js) where users can explore various food recipes and upload their own recipes. The application is dynamic and responsive, providing an engaging user experience across different devices.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
+- User authentication: Sign up and log in to access personalized features.
+- Upload recipes: Authenticated users can upload their own recipes with details and images.
+- Explore recipes: Browse through a wide variety of recipes uploaded by users.
+- Responsive design: Accessible on both desktop and mobile devices for a seamless user experience.
 
-Currently, two official plugins are available:
+## Tech Stack
+- **Frontend:** React.js, HTML, CSS, JavaScript
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB
+- **Authentication:** JSON Web Tokens (JWT), bcrypt
+- **Styling:** CSS, Bootstrap
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## API Endpoints
+### User Authentication
+- **POST** `/api/users/register`: Register a new user
+- **POST** `/api/users/login`: Authenticate a user and get a token
+
+### Recipes
+- **GET** `/api/recipes`: Get all recipes
+- **POST** `/api/recipes`: Create a new recipe (authenticated)
+- **GET** `/api/recipes/:id`: Get a single recipe by ID
+- **PUT** `/api/recipes/:id`: Update a recipe by ID (authenticated)
+- **DELETE** `/api/recipes/:id`: Delete a recipe by ID (authenticated)
+
+## Contributing
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+This project is licensed under the MIT License.
+
+## Contributors
+
+A big thank you to the following individuals who have contributed to this project:
+
+- **Deepika Mathivanan** - [@DEEPIKA MATHIVANAN]([https://github.com/johndoe](https://github.com/22CSR041))
+  - Added user authentication functionality
+  - Enhanced recipe upload feature
+  
+- **Chinna Thambi** - [@CHINNA THAMBI]([https://github.com/janesmith](https://github.com/chinnathambigitHub))
+  - Implemented frontend design using React components
+  - Improved overall application responsiveness
+
+
